@@ -1,0 +1,19 @@
+{
+  "name": "spider-man-web-portal",
+  "version": "1.0.0",
+  "description": "Spider-Man Cinematic Universe Web Portal & Multiverse Hub",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx -y serve .",
+    "dev": "npx -y serve ."
+  },
+  "keywords": [
+    "spider-man",
+    "marvel",
+    "movies",
+    "trailers",
+    "multiverse"
+  ],
+  "author": "",
+  "license": "MIT"
+}

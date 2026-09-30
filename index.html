@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary Meta Tags -->
+  <title>Spider-Man Cinematic Universe | Movies, Trailers & Multiverse Hub</title>
+  <meta name="title" content="Spider-Man Cinematic Universe | Movies, Trailers & Multiverse Hub" />
+  <meta name="description"
+    content="Explore the ultimate Spider-Man cinematic universe guide. Watch official 4K trailers, discover watch orders, view high-res wallpapers, and check streaming OTT availability for Tobey Maguire, Andrew Garfield, Tom Holland, and Spider-Verse films." />
+  <meta name="keywords"
+    content="Spider-Man, Peter Parker, Miles Morales, Tobey Maguire, Andrew Garfield, Tom Holland, Spider-Verse, Marvel Cinematic Universe, Trailers, Watch Order, OTT Streaming" />
+  <meta name="theme-color" content="#e62429" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Spider-Man Cinematic Universe Hub" />
+  <meta property="og:description"
+    content="Explore all Spider-Man movies, watch official trailers, and find where to stream online." />
+  <meta property="og:image"
+    content="https://wallpapers-clan.com/wp-content/uploads/2023/07/spiderman-deep-dark-background.jpg" />
+
+  <!-- FontAwesome Icons & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="spider-logo.png" />
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Interactive Web Silk Canvas -->
+  <canvas id="web-canvas"></canvas>
+
+  <div class="content-wrapper">
+    <!-- ==========================================================================
+         NAVIGATION HEADER
+         ========================================================================== -->
+    <header class="spider-navbar">
+      <div class="container-custom nav-container">
+        <a href="#" class="brand-logo" onclick="soundFX.playThwip()">
+          <img src="spider-logo.png" alt="Spider-Man Logo" class="spider-emblem-icon" />
+          <span class="brand-text">SPIDER-MAN</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#movies" class="nav-link">Movies</a></li>
+          <li><a href="#timeline" class="nav-link">Watch Order</a></li>
+          <li><a href="#roster" class="nav-link">Multiverse Roster</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button id="spidey-sense-btn" class="spidey-sense-trigger" title="Test Spidey Sense">
+            <i class="fas fa-bolt" style="color: var(--spider-gold);"></i> Spidey-Sense
+          </button>
+          <button id="sound-toggle-btn" class="sound-toggle-btn">
+            <i class="fas fa-volume-up"></i> Sound: ON
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==========================================================================
+         HERO SECTION
+         ========================================================================== -->
+    <section class="hero-section">
+      <div class="hero-backdrop"></div>
+      <div class="container-custom">
+        <div class="hero-grid">
+          <div class="hero-text-content">
+            <div class="hero-tag">
+              <span class="pulse-dot"></span> Multiverse Archive • 2002 — 2026
+            </div>
+            <h1 class="hero-title">
+              THE CINEMATIC
+              <span class="text-gradient-spidey">SPIDER-VERSE</span>
+            </h1>
+            <blockquote class="hero-quote">
+              "With great power comes great responsibility."
+            </blockquote>
+            <p class="hero-description">
+              Step into the definitive portal celebrating Peter Parker, Miles Morales, and the entire web of
+              Spider-Heroes. Stream official trailers, explore watch timelines, study iconic villains, and find where to
+              watch every movie in India.
+            </p>
+            <div class="hero-cta-group">
+              <a href="#movies" class="btn-spidey-primary" onclick="soundFX.playThwip()">
+                <i class="fas fa-film"></i> Explore 11 Movies
+              </a>
+              <a href="#timeline" class="btn-spidey-secondary" onclick="soundFX.playThwip()">
+                <i class="fas fa-compass"></i> Watch Order Guide
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-showcase">
+            <div class="hero-feature-card">
+              <div class="feature-img-wrapper">
+                <img src="https://wallpapers.com/images/hd/spider-man-no-way-home-digital-poster-qhrjykox1oo1f30n.jpg"
+                  alt="Spider-Man No Way Home Feature" class="feature-img" />
+                <span class="feature-badge"><i class="fas fa-crown"></i> 3 Generations</span>
+              </div>
+              <div class="feature-content">
+                <h3>Multiverse Convergence</h3>
+                <p>From Sam Raimi's groundbreaking 2002 classic to Tom Holland's upcoming <em>Brand New Day (2026)</em>,
+                  explore the legacy of Marvel's favorite hero.</p>
+                <div class="feature-stats">
+                  <div class="stat-item">
+                    <div class="stat-num">11+</div>
+                    <div class="stat-label">Blockbusters</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-num">3</div>
+                    <div class="stat-label">Spider-Man</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-num">$10B+</div>
+                    <div class="stat-label">Box Office</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MOVIE EXPLORER SECTION
+         ========================================================================== -->
+    <section id="movies" class="section-padding">
+      <div class="container-custom">
+        <div class="section-header">
+          <span class="section-subtitle">Cinematic Filmography</span>
+          <h2 class="section-title">Explore Spider-Man Movies</h2>
+          <p class="section-desc">
+            Filter by era or search across the multiverse. Click any movie card to watch the HD trailer, view exclusive
+            wallpapers, and check streaming options.
+          </p>
+        </div>
+
+        <div class="explorer-controls">
+          <div class="search-bar-wrapper">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="movie-search-input" class="search-input"
+              placeholder="Search by title, villain (e.g. Green Goblin), year, or actor..." />
+          </div>
+
+          <div class="filter-pills-container">
+            <button class="filter-pill active" data-filter="all">All Films (11)</button>
+            <button class="filter-pill" data-filter="raimi">Tobey Maguire (Raimi Trilogy)</button>
+            <button class="filter-pill" data-filter="amazing">Andrew Garfield (The Amazing Saga)</button>
+            <button class="filter-pill" data-filter="mcu">Tom Holland (MCU)</button>
+            <button class="filter-pill" data-filter="spiderverse">Spider-Verse (Animated)</button>
+            <button class="filter-pill" data-filter="upcoming">Upcoming (2026)</button>
+          </div>
+        </div>
+
+        <!-- Dynamic Movie Cards Grid -->
+        <div id="movie-grid" class="movie-grid">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         WATCH ORDER TIMELINE SECTION
+         ========================================================================== -->
+    <section id="timeline" class="section-padding" style="background: rgba(10, 13, 20, 0.5);">
+      <div class="container-custom">
+        <div class="section-header">
+          <span class="section-subtitle">Viewing Order</span>
+          <h2 class="section-title">How To Watch Spider-Man</h2>
+          <p class="section-desc">
+            Choose whether to experience the web-slinger through the original release timeline or the interconnected
+            multiverse chronological order.
+          </p>
+        </div>
+
+        <div class="timeline-toggle-container">
+          <div class="timeline-switch">
+            <button class="timeline-btn active" data-mode="release">
+              <i class="fas fa-history"></i> Release Order (2002 — 2026)
+            </button>
+            <button class="timeline-btn" data-mode="chronological">
+              <i class="fas fa-project-diagram"></i> Multiverse Chronology
+            </button>
+          </div>
+        </div>
+
+        <div class="timeline-wrapper">
+          <div id="timeline-items-container">
+            <!-- Populated by app.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MULTIVERSE ROSTER SECTION
+         ========================================================================== -->
+    <section id="roster" class="section-padding">
+      <div class="container-custom">
+        <div class="section-header">
+          <span class="section-subtitle">Dimensional Directory</span>
+          <h2 class="section-title">Multiverse Heroes & Villains</h2>
+          <p class="section-desc">
+            Discover the iconic wall-crawlers and formidable adversaries across alternate realities in the Marvel
+            multiverse.
+          </p>
+        </div>
+
+        <div class="roster-tabs-container">
+          <button class="roster-tab active" data-type="heroes">
+            <i class="fas fa-mask"></i> Spider-Heroes
+          </button>
+          <button class="roster-tab" data-type="villains">
+            <i class="fas fa-skull"></i> Iconic Villains
+          </button>
+        </div>
+
+        <div id="roster-grid" class="roster-grid">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SPIDEY SENSE BANNER
+         ========================================================================== -->
+    <div class="container-custom">
+      <div class="spidey-sense-banner">
+        <div class="banner-content">
+          <h3>Feel Your Spidey-Sense Tingling?</h3>
+          <p>Tap the radar to channel Peter Parker's legendary sixth sense and discover randomized classic Spider-Man
+            quotes and battle alerts.</p>
+        </div>
+        <button class="btn-spidey-primary" onclick="triggerSpideySenseAlert()">
+          <i class="fas fa-bolt"></i> Trigger Spidey-Sense
+        </button>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         FOOTER
+         ========================================================================== -->
+    <footer id="about" class="spider-footer">
+      <div class="container-custom">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h4>SPIDER-MAN PORTAL</h4>
+            <p>
+              An immersive web tribute designed for Marvel fans worldwide. Dedicated to Stan Lee, Steve Ditko, and every
+              creator who brought the web-slinger to life.
+            </p>
+          </div>
+
+          <div class="footer-column">
+            <h5>Movie Universes</h5>
+            <ul class="footer-links">
+              <li><a href="#movies" class="footer-link">Raimi Trilogy (2002-2007)</a></li>
+              <li><a href="#movies" class="footer-link">The Amazing Saga (2012-2014)</a></li>
+              <li><a href="#movies" class="footer-link">MCU Spider-Man (2017-2026)</a></li>
+              <li><a href="#movies" class="footer-link">Spider-Verse Animated</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h5>Streaming Platforms</h5>
+            <ul class="footer-links">
+              <li><a href="https://www.hotstar.com" target="_blank" rel="noopener noreferrer"
+                  class="footer-link">Disney+ Hotstar</a></li>
+              <li><a href="https://www.primevideo.com" target="_blank" rel="noopener noreferrer"
+                  class="footer-link">Amazon Prime Video</a></li>
+              <li><a href="https://www.mxplayer.in" target="_blank" rel="noopener noreferrer" class="footer-link">MX
+                  Player</a></li>
+              <li><a href="https://www.netflix.com" target="_blank" rel="noopener noreferrer"
+                  class="footer-link">Netflix</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h5>Interactive Features</h5>
+            <ul class="footer-links">
+              <li><a href="#timeline" class="footer-link">Watch Timeline Guide</a></li>
+              <li><a href="#roster" class="footer-link">Character Combat Roster</a></li>
+              <li><a href="javascript:void(0)" onclick="soundFX.playThwip()" class="footer-link">Web Shooter Audio
+                  FX</a></li>
+              <li><a href="javascript:void(0)" onclick="triggerSpideySenseAlert()" class="footer-link">Spidey-Sense
+                  Generator</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2026 Spider-Man Cinematic Portal. Spider-Man & all related characters © MARVEL and Sony Pictures.
+            Fan-created tribute site.</p>
+          <a href="#" class="btn-back-to-top" title="Back to Top" onclick="soundFX.playThwip()">
+            <i class="fas fa-chevron-up"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- ==========================================================================
+       CINEMATIC MOVIE DETAIL MODAL
+       ========================================================================== -->
+  <div id="movie-detail-modal" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-window">
+      <button class="modal-close-btn" onclick="closeMovieModal()" aria-label="Close Movie Details">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="modal-body" id="modal-dynamic-content">
+        <!-- Injected via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       SPIDEY SENSE TOAST NOTIFICATION
+       ========================================================================== -->
+  <div id="spidey-sense-toast" class="toast-spidey-sense">
+    <i class="fas fa-spider" style="color: var(--spider-red); font-size: 1.4rem;"></i>
+    <span class="toast-text">My Spidey-Sense is tingling!</span>
+  </div>
+
+  <!-- Core JavaScript -->
+  <script src="app.js"></script>
+</body>
+
+</html>
