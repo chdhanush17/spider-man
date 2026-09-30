@@ -16,12 +16,12 @@ const SPIDEY_MOVIES = [
     director: "Sam Raimi",
     cast: "Tobey Maguire, Willem Dafoe, Kirsten Dunst, James Franco",
     rating: "7.4/10 IMDb",
-    poster: "https://image.tmdb.org/t/p/original/ynyDOCwNuYqqR6p1d6Nbk7ehpfv.jpg",
+    poster: "https://image.tmdb.org/t/p/w500/ynyDOCwNuYqqR6p1d6Nbk7ehpfv.jpg",
     trailer: "https://www.youtube.com/embed/t06RUxPbp_c?autoplay=1",
     gallery: [
-      "https://wallpapercave.com/wp/wp6988387.jpg",
-      "https://wallpaperaccess.com/full/496545.jpg",
-      "https://staticg.sportskeeda.com/editor/2022/12/092b7-16724339146406-1920.jpg"
+      "https://images.unsplash.com/photo-1604200213928-ba3cf4fc8436?w=900&auto=format&fit=crop&q=75",
+      "https://images.unsplash.com/photo-1635805737707-575885ab0820?w=900&auto=format&fit=crop&q=75",
+      "https://image.tmdb.org/t/p/w780/jT5W6031i9809s9wX1F2hWl7t0X.jpg"
     ],
     synopsis: "Peter Parker, a shy high school student, gains arachnid superpowers after being bitten by a genetically altered spider. Following the tragic murder of his Uncle Ben, Peter embraces his destiny to protect New York City as Spider-Man while battling the psychotic Green Goblin.",
     keyPoints: [
@@ -45,12 +45,12 @@ const SPIDEY_MOVIES = [
     director: "Sam Raimi",
     cast: "Tobey Maguire, Alfred Molina, Kirsten Dunst, James Franco",
     rating: "7.5/10 IMDb",
-    poster: "https://image.tmdb.org/t/p/original/hzCRWTV40w4U9S381NpoTWrfOZQ.jpg",
+    poster: "https://image.tmdb.org/t/p/w500/hzCRWTV40w4U9S381NpoTWrfOZQ.jpg",
     trailer: "https://www.youtube.com/embed/1s9Yln0YwCw?autoplay=1",
     gallery: [
-      "https://images6.alphacoders.com/129/1293547.jpg",
-      "https://images8.alphacoders.com/117/thumb-1920-1176537.jpg",
-      "https://images6.alphacoders.com/334/334221.jpg"
+      "https://images.unsplash.com/photo-1635805737707-575885ab0820?w=900&auto=format&fit=crop&q=75",
+      "https://image.tmdb.org/t/p/w780/6v0m3GqLp1UqLg6p6g7oQ1nO3fA.jpg",
+      "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=900&auto=format&fit=crop&q=75"
     ],
     synopsis: "Peter Parker struggles to juggle college life, love for Mary Jane, and the heavy toll of being Spider-Man. When a fusion reactor experiment goes catastrophically wrong, Dr. Otto Octavius is mutated into the tentacled Doctor Octopus, threatening all of New York.",
     keyPoints: [
@@ -74,12 +74,12 @@ const SPIDEY_MOVIES = [
     director: "Sam Raimi",
     cast: "Tobey Maguire, Topher Grace, Thomas Haden Church, James Franco",
     rating: "6.3/10 IMDb",
-    poster: "https://tse1.mm.bing.net/th/id/OIP.qg9sueWb4eXUWU0RAyoIOQHaLH?rs=1&pid=ImgDetMain&o=7&rm=3",
+    poster: "https://image.tmdb.org/t/p/w500/2jLxvdRz2wFvyw9A6XmU2v89iL5.jpg",
     trailer: "https://www.youtube.com/embed/e5wUilOeOmg?autoplay=1",
     gallery: [
-      "https://images.alphacoders.com/112/thumb-1920-1122066.jpg",
-      "https://images.hdqwalls.com/download/spiderman-3-poster-ke-1920x1080.jpg",
-      "https://wallpapercave.com/wp/wp2642590.jpg"
+      "https://image.tmdb.org/t/p/w780/6v0m3GqLp1UqLg6p6g7oQ1nO3fA.jpg",
+      "https://images.unsplash.com/photo-1604200213928-ba3cf4fc8436?w=900&auto=format&fit=crop&q=75",
+      "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=900&auto=format&fit=crop&q=75"
     ],
     synopsis: "Peter Parker faces his darkest internal trial when an extraterrestrial symbiote bonds with his suit, amplifying his aggression and vanity. Meanwhile, Flint Marko turns into Sandman, Harry Osborn becomes the New Goblin, and Eddie Brock bonds with the symbiote to form Venom.",
     keyPoints: [
@@ -103,12 +103,12 @@ const SPIDEY_MOVIES = [
     director: "Marc Webb",
     cast: "Andrew Garfield, Emma Stone, Rhys Ifans, Martin Sheen",
     rating: "6.9/10 IMDb",
-    poster: "https://tse3.mm.bing.net/th/id/OIP.wnl-P7gJzG3ayBtumyqltAHaLH?rs=1&pid=ImgDetMain&o=7&rm=3",
+    poster: "https://image.tmdb.org/t/p/w500/fSbqPbqXaHQ9x74ab896LHv4OG0.jpg",
     trailer: "https://www.youtube.com/embed/upwf8RsyNqQ?autoplay=1",
     gallery: [
-      "https://wallpapers.com/images/hd/andrew-garfield-background-ih6ae81rq450n419.jpg",
-      "https://wallpaperaccess.com/full/1279505.jpg",
-      "https://th.bing.com/th/id/R.5d61f92a90d7b039bafeae31957ca040?rik=cKlsL6WSDd0gWg&riu=http%3a%2f%2fwallsdesk.com%2fwp-content%2fuploads%2f2016%2f11%2fSpider-Man-Pictures.jpg&ehk=K52%2fYSg4CQeSk3zsY%2f7RKL8r3Fz6Cwg7K4oj1zNXM2s%3d&risl=&pid=ImgRaw&r=0"
+      "https://images.unsplash.com/photo-1635805737707-575885ab0820?w=900&auto=format&fit=crop&q=75",
+      "https://images.unsplash.com/photo-1604200213928-ba3cf4fc8436?w=900&auto=format&fit=crop&q=75",
+      "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=900&auto=format&fit=crop&q=75"
     ],
     synopsis: "Peter Parker investigates the mystery of his parents' sudden disappearance, leading him to Oscorp and his father's former colleague Dr. Curt Connors. After a spider bite grants him abilities, Peter invents mechanical web-shooters and battles Dr. Connors' monstrous alter ego, the Lizard.",
     keyPoints: [
@@ -132,12 +132,12 @@ const SPIDEY_MOVIES = [
     director: "Marc Webb",
     cast: "Andrew Garfield, Emma Stone, Jamie Foxx, Dane DeHaan",
     rating: "6.6/10 IMDb",
-    poster: "https://posterspy.com/wp-content/uploads/2022/06/THE-AMAZING-SPIDERMAN.jpg",
+    poster: "https://image.tmdb.org/t/p/w500/c3e98VR8vI2t7j2PZ4W8L2wM4h0.jpg",
     trailer: "https://www.youtube.com/embed/nbp3Ra3Yp74?autoplay=1",
     gallery: [
-      "https://wallpaper-house.com/data/out/12/wallpaper2you_560690.jpg",
-      "https://i.pinimg.com/originals/d7/2a/fb/d72afb71bfc9f49403838e31bc86c1b2.png",
-      "https://www.fortressofsolitude.co.za/wp-content/uploads/2024/09/Why-Andrew-Garfield-Is-The-Most-Amazing-Spider-Man-Of-All-Time.jpg"
+      "https://images.unsplash.com/photo-1635805737707-575885ab0820?w=900&auto=format&fit=crop&q=75",
+      "https://images.unsplash.com/photo-1604200213928-ba3cf4fc8436?w=900&auto=format&fit=crop&q=75",
+      "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=900&auto=format&fit=crop&q=75"
     ],
     synopsis: "Peter Parker revels in being Spider-Man but agonizes over keeping Gwen Stacy safe. When Max Dillon absorbs massive electrical current to become Electro and Harry Osborn takes the experimental venom to become the Green Goblin, Peter faces a devastating battle at the clock tower.",
     keyPoints: [
@@ -161,12 +161,12 @@ const SPIDEY_MOVIES = [
     director: "Jon Watts",
     cast: "Tom Holland, Michael Keaton, Robert Downey Jr., Zendaya",
     rating: "7.4/10 IMDb",
-    poster: "https://i.pinimg.com/originals/76/3e/f0/763ef00456c535a5478a7e1eb3acaea4.jpg",
+    poster: "https://image.tmdb.org/t/p/w500/c24sv2weTHPsmDa7jEMN0R2PBD3.jpg",
     trailer: "https://www.youtube.com/embed/DiTECkLZ8HM?autoplay=1",
     gallery: [
-      "https://wallpaperaccess.com/full/243559.jpg",
-      "https://images4.alphacoders.com/110/thumb-1920-1106453.jpg",
-      "https://images.hdqwalls.com/download/spiderman-homecoming-movie-poster-c1-1920x1080.jpg"
+      "https://image.tmdb.org/t/p/w780/tMefBSflR6PGQLv7WvFPpKLZkyk.jpg",
+      "https://images.unsplash.com/photo-1635805737707-575885ab0820?w=900&auto=format&fit=crop&q=75",
+      "https://images.unsplash.com/photo-1604200213928-ba3cf4fc8436?w=900&auto=format&fit=crop&q=75"
     ],
     synopsis: "Fresh off his experience with the Avengers, young Peter Parker returns home to Queens under the watchful eye of his mentor Tony Stark. Eager to prove he's more than just a friendly neighborhood Spider-Man, Peter confronts Adrian Toomes (The Vulture), an illegal alien-tech arms dealer.",
     keyPoints: [
@@ -190,12 +190,12 @@ const SPIDEY_MOVIES = [
     director: "Bob Persichetti, Peter Ramsey, Rodney Rothman",
     cast: "Shameik Moore, Jake Johnson, Hailee Steinfeld, Mahershala Ali",
     rating: "8.4/10 IMDb",
-    poster: "https://tse2.mm.bing.net/th/id/OIP.84EiSwZtDhZVUwFkddqYlAHaLH?rs=1&pid=ImgDetMain&o=7&rm=3",
+    poster: "https://image.tmdb.org/t/p/w500/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg",
     trailer: "https://www.youtube.com/embed/ii3n7hYQOl4?autoplay=1",
     gallery: [
-      "https://streamcoimg-a.akamaihd.net/000/496/6469/4966469-Banner-L2-7f95cfcd48f76b8db10716cb02884562.jpg",
-      "https://wallpaperaccess.com/full/1313510.jpg",
-      "https://images.expothemes.com/spider-man-into-the-spider-verse/images/spider-man-into-the-spider-verse-windows-theme-23-hd.jpg"
+      "https://image.tmdb.org/t/p/w780/tZdrSadflgipmsrgdgiCwnghtqO.jpg",
+      "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=900&auto=format&fit=crop&q=75",
+      "https://images.unsplash.com/photo-1635805737707-575885ab0820?w=900&auto=format&fit=crop&q=75"
     ],
     synopsis: "Brooklyn teen Miles Morales is bitten by a radioactive spider and witnesses the death of Peter Parker. When Kingpin's multiverse super-collider tears reality open, five alternate Spider-Heroes—including disheveled Peter B. Parker and Spider-Gwen—unite to teach Miles how to take a leap of faith.",
     keyPoints: [
@@ -219,12 +219,12 @@ const SPIDEY_MOVIES = [
     director: "Jon Watts",
     cast: "Tom Holland, Jake Gyllenhaal, Zendaya, Samuel L. Jackson",
     rating: "7.4/10 IMDb",
-    poster: "https://tse1.mm.bing.net/th/id/OIP.i1aIGenvmekZMMrQKu1zywHaLH?rs=1&pid=ImgDetMain&o=7&rm=3",
+    poster: "https://image.tmdb.org/t/p/w500/4q2hz2m8hubgvij98EzW2n8YCMN.jpg",
     trailer: "https://www.youtube.com/embed/DYYtuKyMtY8?autoplay=1",
     gallery: [
-      "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/10af0b39-a57e-4f10-aeb1-fd388299ed5b/dd30sej-ba00f8a2-fdcf-48ad-8681-e507010cba43.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzEwYWYwYjM5LWE1N2UtNGYxMC1hZWIxLWZkMzg4Mjk5ZWQ1YlwvZGQzMHNlai1iYTAwZjhhMi1mZGNmLTQ4YWQtODY4MS1lNTA3MDEwY2JhNDMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.pWIARDMHQJbaWljid6OPz2QhIqDTW5DPZW3cXG-iUEA",
-      "https://images.wallpapersden.com/image/download/spider-man-far-from-home-12k_a2poamuUmZqaraWkpJRmbmdlrWZlbWU.jpg",
-      "https://images.squarespace-cdn.com/content/v1/51b3dc8ee4b051b96ceb10de/1561390079441-37Y9MQYF4GDT1IYY4QIL/spider-mans-spidey-sense-is-called-peter-tingle-in-amusing-new-promo-clip-for-spider-man-far-from-home-social.jpg"
+      "https://image.tmdb.org/t/p/w780/ng6SSB3JvuTNKRIy7zlTE99K6vw.jpg",
+      "https://images.unsplash.com/photo-1635805737707-575885ab0820?w=900&auto=format&fit=crop&q=75",
+      "https://images.unsplash.com/photo-1604200213928-ba3cf4fc8436?w=900&auto=format&fit=crop&q=75"
     ],
     synopsis: "Following the events of Avengers: Endgame, Peter Parker goes on a school vacation across Europe. Nick Fury enlists him to investigate mysterious Elemental monsters alongside Quentin Beck (Mysterio), a master of holographic illusions who harbors sinister ambitions.",
     keyPoints: [
@@ -248,12 +248,12 @@ const SPIDEY_MOVIES = [
     director: "Jon Watts",
     cast: "Tom Holland, Tobey Maguire, Andrew Garfield, Zendaya, Benedict Cumberbatch, Willem Dafoe",
     rating: "8.2/10 IMDb",
-    poster: "https://wallpapers.com/images/hd/spider-man-no-way-home-digital-poster-qhrjykox1oo1f30n.jpg",
+    poster: "https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
     trailer: "https://www.youtube.com/embed/JfVOs4VSpmA?autoplay=1",
     gallery: [
-      "https://images7.alphacoders.com/132/thumb-1920-1322340.jpg",
-      "https://wallpapers.com/images/hd/spider-man-no-way-home-3840-x-2160-picture-1aaxsn2hfqo4yg5l.jpg",
-      "https://images.hdqwalls.com/download/spiderman-no-way-home-movie-poster-tc-1920x1080.jpg"
+      "https://image.tmdb.org/t/p/w780/1RR5uv8QIwFiR2qZvdQ1hx8i7P8.jpg",
+      "https://images.unsplash.com/photo-1635805737707-575885ab0820?w=900&auto=format&fit=crop&q=75",
+      "https://images.unsplash.com/photo-1604200213928-ba3cf4fc8436?w=900&auto=format&fit=crop&q=75"
     ],
     synopsis: "With Spider-Man's identity exposed, Peter seeks help from Doctor Strange to make the world forget. But when the spell goes haywire, multiverse rifts pull legendary villains—Green Goblin, Doc Ock, Sandman, Electro, and Lizard—along with Tobey Maguire and Andrew Garfield's Spider-Men into the MCU.",
     keyPoints: [
@@ -277,12 +277,12 @@ const SPIDEY_MOVIES = [
     director: "Joaquim Dos Santos, Kemp Powers, Justin K. Thompson",
     cast: "Shameik Moore, Hailee Steinfeld, Oscar Isaac, Daniel Kaluuya",
     rating: "8.6/10 IMDb",
-    poster: "https://tse4.mm.bing.net/th/id/OIP.V0ustTI4Xr26oBuCCEV7GAHaK8?rs=1&pid=ImgDetMain&o=7&rm=3",
+    poster: "https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
     trailer: "https://www.youtube.com/embed/cqGjhVJWtEg?autoplay=1",
     gallery: [
-      "https://images.wallpapersden.com/image/download/fortnite-spider-verse_bmVrZ2eUmZqaraWkpJRmbmdlrWZlbWU.jpg",
-      "https://images.hdqwalls.com/download/spider-man-across-the-spider-verse-4k-zg-1920x1080.jpg",
-      "https://preview.redd.it/spider-man-across-the-spider-verse-1920x1080-v0-ki4gcq26iw4b1.jpg?auto=webp&s=29bfc789c434169b8ae49272e1a3d6eab3eb1a59"
+      "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=900&auto=format&fit=crop&q=75",
+      "https://images.unsplash.com/photo-1635805737707-575885ab0820?w=900&auto=format&fit=crop&q=75",
+      "https://image.tmdb.org/t/p/w780/tZdrSadflgipmsrgdgiCwnghtqO.jpg"
     ],
     synopsis: "Miles Morales catapults across the Multiverse, where he encounters a society of Spider-Heroes led by Miguel O'Hara (Spider-Man 2099) charged with protecting existence. When heroes clash over how to handle a threat to canon events, Miles stands alone to redefine what it means to be a hero.",
     keyPoints: [
@@ -309,9 +309,9 @@ const SPIDEY_MOVIES = [
     poster: "https://tse1.mm.bing.net/th/id/OIP.-hv9IVgJGomvObGAEHtUJgHaLH?rs=1&pid=ImgDetMain&o=7&rm=3",
     trailer: "https://www.youtube.com/embed/QOdF1zK4ZkY?autoplay=1",
     gallery: [
-      "https://wallpapers.com/images/hd/spider-man-vector-art-4k-7gw8j1lhg6kng2n3.jpg",
-      "https://c4.wallpaperflare.com/wallpaper/946/310/331/spiderman-half-mask-ps4-wallpaper-preview.jpg",
-      "https://wallpapers-clan.com/wp-content/uploads/2023/07/spiderman-deep-dark-background.jpg"
+      "https://images.unsplash.com/photo-1604200213928-ba3cf4fc8436?w=900&auto=format&fit=crop&q=75",
+      "https://images.unsplash.com/photo-1635805737707-575885ab0820?w=900&auto=format&fit=crop&q=75",
+      "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=900&auto=format&fit=crop&q=75"
     ],
     synopsis: "Following the memory-wipe in No Way Home, Peter Parker navigates a gritty, grounded life in NYC with no Stark tech and no superhero allies. Drawing from comic arcs, Peter takes on ruthless street-level corruption while crossing paths with The Punisher and Bruce Banner.",
     keyPoints: [
@@ -337,7 +337,7 @@ const ROSTER_DATA = {
       name: "Peter Parker",
       alias: "Friendly Neighborhood Spider-Man (Tobey)",
       universe: "Earth-96283",
-      avatar: "https://image.tmdb.org/t/p/original/ynyDOCwNuYqqR6p1d6Nbk7ehpfv.jpg",
+      avatar: "https://image.tmdb.org/t/p/w200/ynyDOCwNuYqqR6p1d6Nbk7ehpfv.jpg",
       bio: "The original cinematic wall-crawler who learned that with great power comes great responsibility. Possesses organic webbing and unmatched endurance.",
       stats: { power: 90, agility: 88, intelligence: 85 }
     },
@@ -345,7 +345,7 @@ const ROSTER_DATA = {
       name: "Peter Parker",
       alias: "The Amazing Spider-Man (Andrew)",
       universe: "Earth-120703",
-      avatar: "https://tse3.mm.bing.net/th/id/OIP.wnl-P7gJzG3ayBtumyqltAHaLH?rs=1&pid=ImgDetMain&o=7&rm=3",
+      avatar: "https://image.tmdb.org/t/p/w200/fSbqPbqXaHQ9x74ab896LHv4OG0.jpg",
       bio: "Brilliant scientific intellect who engineered high-pressure mechanical web-shooters. Renowned for high-speed acrobatic agility and witty banter.",
       stats: { power: 86, agility: 96, intelligence: 92 }
     },
@@ -353,7 +353,7 @@ const ROSTER_DATA = {
       name: "Peter Parker",
       alias: "Spider-Man (Tom Holland - MCU)",
       universe: "Earth-616",
-      avatar: "https://i.pinimg.com/originals/76/3e/f0/763ef00456c535a5478a7e1eb3acaea4.jpg",
+      avatar: "https://image.tmdb.org/t/p/w200/c24sv2weTHPsmDa7jEMN0R2PBD3.jpg",
       bio: "Young Avenger mentored by Iron Man. Survived multiversal conflicts and chose complete anonymity to protect those he loves.",
       stats: { power: 88, agility: 92, intelligence: 90 }
     },
@@ -361,7 +361,7 @@ const ROSTER_DATA = {
       name: "Miles Morales",
       alias: "Spider-Man (Brooklyn)",
       universe: "Earth-1610",
-      avatar: "https://tse2.mm.bing.net/th/id/OIP.84EiSwZtDhZVUwFkddqYlAHaLH?rs=1&pid=ImgDetMain&o=7&rm=3",
+      avatar: "https://image.tmdb.org/t/p/w200/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg",
       bio: "Master of unique bio-electric Venom Strike and camouflage invisibility. Defied the Spider Society's predetermined canon destiny.",
       stats: { power: 94, agility: 90, intelligence: 88 }
     },
@@ -369,7 +369,7 @@ const ROSTER_DATA = {
       name: "Gwen Stacy",
       alias: "Spider-Gwen / Ghost-Spider",
       universe: "Earth-65",
-      avatar: "https://tse4.mm.bing.net/th/id/OIP.V0ustTI4Xr26oBuCCEV7GAHaK8?rs=1&pid=ImgDetMain&o=7&rm=3",
+      avatar: "https://image.tmdb.org/t/p/w200/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
       bio: "Drummer and superhuman heroine with fluid, balletic combat reflexes and dimensional travel wristband.",
       stats: { power: 84, agility: 95, intelligence: 87 }
     },
@@ -377,7 +377,7 @@ const ROSTER_DATA = {
       name: "Miguel O'Hara",
       alias: "Spider-Man 2099",
       universe: "Earth-928",
-      avatar: "https://preview.redd.it/spider-man-across-the-spider-verse-1920x1080-v0-ki4gcq26iw4b1.jpg?auto=webp&s=29bfc789c434169b8ae49272e1a3d6eab3eb1a59",
+      avatar: "https://tse4.mm.bing.net/th/id/OIP.V0ustTI4Xr26oBuCCEV7GAHaK8?rs=1&pid=ImgDetMain&o=7&rm=3",
       bio: "Leader of the Spider Society. Genetically fused spider-DNA gives him paralyzing fangs, talons, and light-energy web lines.",
       stats: { power: 96, agility: 89, intelligence: 95 }
     }
@@ -387,7 +387,7 @@ const ROSTER_DATA = {
       name: "Norman Osborn",
       alias: "Green Goblin",
       universe: "Earth-96283",
-      avatar: "https://images.hdqwalls.com/download/spiderman-no-way-home-movie-poster-tc-1920x1080.jpg",
+      avatar: "https://image.tmdb.org/t/p/w200/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
       bio: "Psychopathic corporate titan powered by Oscorp goblin formula, pumpkin bombs, and razor-sharp glider.",
       stats: { power: 91, agility: 85, intelligence: 94 }
     },
@@ -395,7 +395,7 @@ const ROSTER_DATA = {
       name: "Dr. Otto Octavius",
       alias: "Doctor Octopus",
       universe: "Earth-96283",
-      avatar: "https://images8.alphacoders.com/117/thumb-1920-1176537.jpg",
+      avatar: "https://image.tmdb.org/t/p/w200/hzCRWTV40w4U9S381NpoTWrfOZQ.jpg",
       bio: "Nuclear physicist fused with four indestructible AI-driven titanium-steel mechanical tentacles.",
       stats: { power: 93, agility: 80, intelligence: 98 }
     },
@@ -403,7 +403,7 @@ const ROSTER_DATA = {
       name: "Eddie Brock",
       alias: "Venom",
       universe: "Symbiote Multiverse",
-      avatar: "https://wallpapercave.com/wp/wp2642590.jpg",
+      avatar: "https://image.tmdb.org/t/p/w200/2jLxvdRz2wFvyw9A6XmU2v89iL5.jpg",
       bio: "Alien symbiote with superhuman brute strength, tendrils, teeth, and immunity to Spider-Sense.",
       stats: { power: 97, agility: 86, intelligence: 78 }
     },
@@ -411,7 +411,7 @@ const ROSTER_DATA = {
       name: "Quentin Beck",
       alias: "Mysterio",
       universe: "Earth-616",
-      avatar: "https://images.wallpapersden.com/image/download/spider-man-far-from-home-12k_a2poamuUmZqaraWkpJRmbmdlrWZlbWU.jpg",
+      avatar: "https://image.tmdb.org/t/p/w200/4q2hz2m8hubgvij98EzW2n8YCMN.jpg",
       bio: "Illusionist genius who weaponized Stark holographic drones to deceive nations and frame Spider-Man.",
       stats: { power: 75, agility: 72, intelligence: 96 }
     },
@@ -419,7 +419,7 @@ const ROSTER_DATA = {
       name: "Max Dillon",
       alias: "Electro",
       universe: "Earth-120703",
-      avatar: "https://posterspy.com/wp-content/uploads/2022/06/THE-AMAZING-SPIDERMAN.jpg",
+      avatar: "https://image.tmdb.org/t/p/w200/c3e98VR8vI2t7j2PZ4W8L2wM4h0.jpg",
       bio: "Pure living electrical energy capable of manipulating high-voltage grid systems and lightning.",
       stats: { power: 95, agility: 91, intelligence: 82 }
     }
@@ -641,7 +641,7 @@ function renderMovies() {
       (movie) => `
     <article class="movie-card" onclick="openMovieModal('${movie.id}')" data-id="${movie.id}">
       <div class="movie-card-poster-wrapper">
-        <img src="${movie.poster}" alt="${movie.title}" class="movie-card-poster" loading="lazy" />
+        <img src="${movie.poster}" alt="${movie.title}" class="movie-card-poster" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1635805737707-575885ab0820?w=500&auto=format&fit=crop&q=80';" />
         <span class="movie-badge-era">${movie.eraLabel}</span>
         <div class="movie-card-overlay-btn">
           <div class="play-trailer-circle">
@@ -747,6 +747,8 @@ function openMovieModal(movieId) {
               alt="${movie.title} Still ${idx + 1}" 
               class="carousel-slide-img ${idx === 0 ? 'active' : ''}" 
               data-idx="${idx}"
+              loading="lazy"
+              decoding="async"
             />
           `
             )
@@ -961,7 +963,7 @@ function renderRoster(type = 'heroes') {
       (char) => `
     <div class="roster-card" onclick="soundFX.playThwip()">
       <div class="roster-avatar-wrapper">
-        <img src="${char.avatar}" alt="${char.name}" class="roster-avatar" />
+        <img src="${char.avatar}" alt="${char.name}" class="roster-avatar" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1635805737707-575885ab0820?w=160&auto=format&fit=crop&q=80';" />
       </div>
       <h4 class="roster-name">${char.name}</h4>
       <div class="roster-alias">${char.alias}</div>
