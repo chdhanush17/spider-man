@@ -452,8 +452,8 @@ class SoundFXController {
     const btn = document.getElementById('sound-toggle-btn');
     if (btn) {
       btn.innerHTML = this.soundEnabled 
-        ? '<i class="fas fa-volume-up"></i> Sound: ON' 
-        : '<i class="fas fa-volume-mute"></i> Sound: OFF';
+        ? '<i class="fas fa-volume-up"></i> <span class="sound-btn-text">Sound: ON</span>' 
+        : '<i class="fas fa-volume-mute"></i> <span class="sound-btn-text">Sound: OFF</span>';
     }
     if (this.soundEnabled) {
       this.playThwip();
@@ -1051,6 +1051,57 @@ function setupWebClickEffects() {
   });
 }
 
+// Mobile drawer navigation controller
+function setupMobileMenu() {
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  if (!toggleBtn || !navLinks) return;
+
+  function toggleMenu(forceState) {
+    const isOpening = typeof forceState === 'boolean' ? forceState : !navLinks.classList.contains('mobile-open');
+    navLinks.classList.toggle('mobile-open', isOpening);
+    toggleBtn.classList.toggle('active', isOpening);
+    toggleBtn.setAttribute('aria-expanded', isOpening ? 'true' : 'false');
+    toggleBtn.innerHTML = isOpening ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    if (isOpening) {
+      soundFX.playThwip();
+    }
+  }
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  // Close menu when clicking on any nav link
+  navLinks.querySelectorAll('.nav-link').forEach((link) => {
+    link.addEventListener('click', () => {
+      toggleMenu(false);
+    });
+  });
+
+  // Close when clicking outside
+  document.addEventListener('click', (e) => {
+    if (navLinks.classList.contains('mobile-open') && !navLinks.contains(e.target) && !toggleBtn.contains(e.target)) {
+      toggleMenu(false);
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navLinks.classList.contains('mobile-open')) {
+      toggleMenu(false);
+    }
+  });
+
+  // Auto close on window resize when reaching tablet/desktop width
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && navLinks.classList.contains('mobile-open')) {
+      toggleMenu(false);
+    }
+  });
+}
+
 // ==========================================================================
 // 10. GLOBAL INITIALIZATION
 // ==========================================================================
@@ -1063,6 +1114,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderRoster('heroes');
   setupRosterTabs();
   setupWebClickEffects();
+  setupMobileMenu();
 
   // Sound toggle button
   const soundBtn = document.getElementById('sound-toggle-btn');
@@ -1105,3 +1157,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+

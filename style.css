@@ -248,11 +248,26 @@ body {
 
 .mobile-menu-toggle {
   display: none;
-  background: none;
-  border: none;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
   color: #fff;
-  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 1.15rem;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  backdrop-filter: var(--glass-blur);
+  transition: var(--tr-fast);
+}
+
+.mobile-menu-toggle:hover,
+.mobile-menu-toggle.active {
+  background: rgba(230, 36, 41, 0.25);
+  border-color: var(--spider-red);
+  color: #fff;
+  box-shadow: 0 0 15px var(--spider-red-glow);
 }
 
 /* ==========================================================================
@@ -1645,70 +1660,743 @@ body {
 }
 
 /* ==========================================================================
-   RESPONSIVE BREAKPOINTS
+   RESPONSIVE DESIGN & GRID ARCHITECTURE
+   Tier 1: Laptop & Desktop Screens (min-width: 1025px / 1280px+)
+   Tier 2: Tablet Screens (769px to 1024px)
+   Tier 3: Mobile Screens (max-width: 768px)
+   Tier 4: Small Mobile Devices (max-width: 480px)
    ========================================================================== */
-@media (max-width: 1024px) {
+
+/* --------------------------------------------------------------------------
+   1. LAPTOP & LARGE SCREENS (min-width: 1025px)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1025px) {
   .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 3.5rem;
+    align-items: center;
   }
 
-  .hero-showcase {
-    justify-content: flex-start;
+  .movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+    gap: 2rem;
+  }
+
+  .roster-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 2rem;
   }
 
   .modal-grid-layout {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 2.5rem;
   }
 
   .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr;
+    gap: 3rem;
   }
 }
 
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
+/* Widescreen Laptop enhancements (min-width: 1280px) */
+@media (min-width: 1280px) {
+  .movie-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 
-  .mobile-menu-toggle {
-    display: block;
+  .roster-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. TABLET SCREENS (769px to 1024px)
+   Distinct tablet grid system:
+   - 2-to-3 column movie and roster layouts
+   - 2x2 symmetrical footer grid
+   - Streamlined single-column left-axis timeline
+   - Proportional stacked hero showcase
+   -------------------------------------------------------------------------- */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container-custom {
+    padding: 0 2rem;
+    max-width: 960px;
+  }
+
+  .spider-navbar {
+    padding: 0.8rem 0;
+  }
+
+  .nav-container {
+    gap: 1rem;
+  }
+
+  .brand-text {
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+  }
+
+  .spider-emblem-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .nav-links {
+    gap: 1.25rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+
+  .sound-toggle-btn,
+  .spidey-sense-trigger {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.8rem;
+  }
+
+  /* Tablet Hero Layout */
+  .hero-section {
+    padding: 5.5rem 0 4rem;
+    min-height: auto;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: left;
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 5.5vw, 4.2rem);
+  }
+
+  .hero-description {
+    max-width: 100%;
+  }
+
+  .hero-showcase {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-feature-card {
+    max-width: 520px;
+    width: 100%;
+  }
+
+  .feature-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  /* Tablet Movie Explorer Grid */
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
+
+  .filter-pills-container {
+    gap: 0.65rem;
+  }
+
+  .filter-pill {
+    padding: 0.5rem 1.15rem;
+    font-size: 0.85rem;
+  }
+
+  /* Tablet Watch Order Timeline */
+  .timeline-wrapper {
+    max-width: 100%;
+    padding: 1.5rem 0;
   }
 
   .timeline-wrapper::before {
-    left: 20px;
+    left: 28px;
+    transform: none;
   }
 
   .timeline-item {
     width: 100%;
     left: 0 !important;
-    padding-left: 3.5rem;
-    padding-right: 1rem;
+    padding-left: 4.5rem !important;
+    padding-right: 1rem !important;
     text-align: left !important;
+    margin-bottom: 2.75rem;
+  }
+
+  .timeline-dot {
+    left: 19px !important;
+    right: auto !important;
+  }
+
+  /* Tablet Multiverse Roster Grid */
+  .roster-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
+
+  /* Tablet Spidey Sense Banner */
+  .spidey-sense-banner {
+    padding: 2.25rem 2rem;
+    gap: 1.5rem;
+  }
+
+  /* Tablet Movie Modal */
+  .modal-window {
+    max-width: 760px;
+    max-height: 88vh;
+  }
+
+  .modal-grid-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* Tablet Footer Grid (2x2 Balanced Matrix) */
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 2rem;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1024px) {
+  .movie-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .roster-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. MOBILE SCREENS (max-width: 768px)
+   Dedicated mobile layout & grid system:
+   - Full glassmorphism mobile hamburger navigation drawer
+   - Single-column stacked hero and controls
+   - 1-to-2 column responsive mobile cards grid
+   - Horizontally scrollable swipeable filter pill rail
+   - Full-width touch-friendly timeline and dialogs
+   - Single column footer
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .container-custom {
+    padding: 0 1.25rem;
+  }
+
+  /* Mobile Navbar */
+  .spider-navbar {
+    padding: 0.65rem 0;
+  }
+
+  .spider-emblem-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .brand-text {
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(8, 11, 18, 0.97);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-bottom: 1px solid rgba(230, 36, 41, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.85);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.25rem 1.5rem 1.75rem;
+    gap: 0.5rem;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity var(--tr-normal), transform var(--tr-normal);
+  }
+
+  .nav-links.mobile-open {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    background: rgba(230, 36, 41, 0.15);
+    border-color: rgba(230, 36, 41, 0.4);
+    color: #fff;
+    padding-left: 1.25rem;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .nav-actions {
+    gap: 0.5rem;
+  }
+
+  .sound-toggle-btn,
+  .spidey-sense-trigger {
+    padding: 0.42rem 0.75rem;
+    font-size: 0.78rem;
+  }
+
+  /* Mobile Hero Grid */
+  .hero-section {
+    padding: 4.5rem 0 3.5rem;
+    min-height: auto;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.75rem;
+  }
+
+  .hero-tag {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.4rem, 8.5vw, 3.4rem);
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .hero-quote {
+    font-size: 1.05rem;
+    padding-left: 0.9rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.75rem;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.85rem;
+    width: 100%;
+  }
+
+  .btn-spidey-primary,
+  .btn-spidey-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 0.85rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .hero-showcase {
+    width: 100%;
+  }
+
+  .hero-feature-card {
+    max-width: 100%;
+    width: 100%;
+    padding: 1.25rem;
+  }
+
+  .feature-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .feature-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  .stat-item .stat-num {
+    font-size: 1.25rem;
+  }
+
+  .stat-item .stat-label {
+    font-size: 0.68rem;
+  }
+
+  /* Section Headers */
+  .section-padding {
+    padding: 4rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 2.25rem;
+  }
+
+  .section-title {
+    font-size: clamp(2.1rem, 7.5vw, 2.9rem);
+  }
+
+  .section-desc {
+    font-size: 0.92rem;
+  }
+
+  /* Movie Explorer & Mobile Filter Rail */
+  .explorer-controls {
+    margin-bottom: 2rem;
+    gap: 1.2rem;
+  }
+
+  .search-input {
+    padding: 0.8rem 1.2rem 0.8rem 2.8rem;
+    font-size: 0.92rem;
+  }
+
+  .search-icon {
+    left: 1rem;
+    font-size: 1rem;
+  }
+
+  /* Touch-friendly horizontal swipeable category rail */
+  .filter-pills-container {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding: 0.25rem 0.25rem 0.75rem;
+    gap: 0.6rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .filter-pills-container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-pill {
+    flex-shrink: 0;
+    white-space: nowrap;
+    font-size: 0.82rem;
+    padding: 0.5rem 1.1rem;
+  }
+
+  /* Mobile Movie Grid (2 columns on tablets/phablets 481-768px) */
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .movie-card-info {
+    padding: 1rem;
+  }
+
+  .movie-card-title {
+    font-size: 1.05rem;
+  }
+
+  .movie-card-synopsis {
+    font-size: 0.8rem;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Mobile Watch Order Timeline */
+  .timeline-toggle-container {
+    margin-bottom: 2.25rem;
+  }
+
+  .timeline-switch {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    border-radius: 16px;
+    gap: 0.4rem;
+  }
+
+  .timeline-btn {
+    width: 100%;
+    text-align: center;
+    padding: 0.65rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .timeline-wrapper {
+    padding: 1rem 0;
+  }
+
+  .timeline-wrapper::before {
+    left: 20px;
+    transform: none;
+    width: 2px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    padding: 0 0 0 3.25rem !important;
+    text-align: left !important;
+    margin-bottom: 2rem;
   }
 
   .timeline-dot {
     left: 11px !important;
+    right: auto !important;
+    width: 16px;
+    height: 16px;
+    top: 20px;
   }
 
+  .timeline-card {
+    padding: 1.2rem;
+    border-radius: 14px;
+  }
+
+  .timeline-year {
+    font-size: 1.3rem;
+  }
+
+  .timeline-title {
+    font-size: 1.05rem;
+  }
+
+  .timeline-desc {
+    font-size: 0.85rem;
+  }
+
+  /* Mobile Multiverse Roster Grid */
+  .roster-tabs-container {
+    gap: 0.65rem;
+    margin-bottom: 2rem;
+  }
+
+  .roster-tab {
+    padding: 0.55rem 1.25rem;
+    font-size: 0.88rem;
+  }
+
+  .roster-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .roster-card {
+    padding: 1.25rem 0.85rem;
+  }
+
+  .roster-avatar-wrapper {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 0.9rem;
+  }
+
+  .roster-name {
+    font-size: 1.1rem;
+  }
+
+  .roster-alias {
+    font-size: 0.78rem;
+  }
+
+  .roster-bio {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  /* Spidey Sense Banner */
   .spidey-sense-banner {
     flex-direction: column;
     text-align: center;
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.25rem;
+    gap: 1.25rem;
+    border-radius: 18px;
   }
 
+  .spidey-sense-banner .banner-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .spidey-sense-banner .banner-content p {
+    font-size: 0.88rem;
+  }
+
+  .spidey-sense-banner .btn-spidey-primary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Mobile Movie Modal */
+  .modal-overlay {
+    padding: 0.75rem;
+    align-items: center;
+  }
+
+  .modal-window {
+    max-height: 90vh;
+    border-radius: 20px;
+  }
+
+  .modal-close-btn {
+    top: 1rem;
+    right: 1rem;
+    width: 38px;
+    height: 38px;
+    font-size: 1.1rem;
+  }
+
+  .modal-body {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .modal-header-hero {
+    margin-bottom: 1.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .modal-title {
+    font-size: clamp(1.8rem, 7vw, 2.4rem);
+  }
+
+  .modal-meta-row {
+    gap: 0.85rem;
+    font-size: 0.85rem;
+  }
+
+  .modal-grid-layout {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .carousel-nav-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 0.85rem;
+  }
+
+  /* Mobile Footer Grid */
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
+  .footer-brand p {
+    max-width: 100%;
+  }
+
   .footer-bottom {
-    flex-direction: column;
-    gap: 1rem;
+    flex-direction: column-reverse;
+    gap: 1.25rem;
     text-align: center;
   }
 
+  .toast-spidey-sense {
+    bottom: 16px;
+    right: 16px;
+    left: 16px;
+    font-size: 0.88rem;
+    padding: 0.85rem 1.2rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. SMALL MOBILE DEVICES (max-width: 480px)
+   Ultra-compact single-column card grids for smaller mobile screens
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .container-custom {
+    padding: 0 1rem;
+  }
+
+  .brand-text {
+    font-size: 1.35rem;
+    letter-spacing: 1px;
+  }
+
+  .spider-emblem-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  /* Compact nav action buttons - hide text on ultra small screens */
+  .nav-btn-label,
+  .sound-btn-text {
+    display: none;
+  }
+
+  .sound-toggle-btn,
+  .spidey-sense-trigger {
+    padding: 0.45rem 0.65rem;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    justify-content: center;
+  }
+
+  .mobile-menu-toggle {
+    width: 38px;
+    height: 38px;
+  }
+
+  .hero-title {
+    font-size: 2.3rem;
+  }
+
+  /* 1-Column Movie Grid for small phones */
+  .movie-grid {
+    grid-template-columns: 1fr;
+    max-width: 340px;
+    margin: 0 auto;
+    gap: 1.5rem;
+  }
+
+  /* 1-Column Roster Grid for small phones */
+  .roster-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+    margin: 0 auto;
+    gap: 1.5rem;
+  }
+
+  .timeline-item {
+    padding-left: 2.85rem !important;
+  }
+
+  .timeline-wrapper::before {
+    left: 16px;
+  }
+
+  .timeline-dot {
+    left: 7px !important;
+  }
+
+  .modal-overlay {
+    padding: 0.5rem;
+  }
+
   .modal-body {
-    padding: 1.5rem;
+    padding: 1.25rem 1rem;
   }
 }
