@@ -1223,6 +1223,82 @@ function setupMobileMenu() {
   });
 }
 
+// Mobile Avatar Story Rail controller
+function renderMobileRosterStories() {
+  const container = document.getElementById('mobile-roster-stories');
+  if (!container) return;
+
+  const heroes = ROSTER_DATA.heroes || [];
+  const villains = ROSTER_DATA.villains || [];
+  const stories = [
+    ...heroes.map((h) => ({ name: h.name, alias: h.alias, avatar: h.avatar, type: 'hero' })),
+    ...villains.slice(0, 3).map((v) => ({ name: v.name, alias: v.alias, avatar: v.avatar, type: 'villain' }))
+  ];
+
+  container.innerHTML = stories
+    .map(
+      (char) => `
+    <button class="story-avatar-chip" onclick="highlightRosterCharacter('${char.name}')" title="${char.name} (${char.alias})">
+      <div class="story-ring ${char.type === 'villain' ? 'villain-ring' : ''}">
+        <img src="${char.avatar}" alt="${char.name}" class="story-avatar-img" />
+      </div>
+      <span class="story-chip-label">${char.name.split(' ')[0]}</span>
+    </button>
+  `
+    )
+    .join('');
+}
+
+function highlightRosterCharacter(name) {
+  soundFX.playThwip();
+  const cards = document.querySelectorAll('.roster-card');
+  cards.forEach((card) => {
+    const titleEl = card.querySelector('.roster-name');
+    if (titleEl && titleEl.textContent.toLowerCase().includes(name.toLowerCase())) {
+      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      card.classList.add('highlight-pulse');
+      setTimeout(() => card.classList.remove('highlight-pulse'), 2000);
+    }
+  });
+}
+
+// Mobile Bottom Navigation Dock Scroll-Spy & Touch Feedback
+function setupMobileBottomNav() {
+  const navItems = document.querySelectorAll('.mobile-bottom-nav .mobile-nav-item:not(.mobile-sense-btn)');
+  if (navItems.length === 0) return;
+
+  navItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      soundFX.playThwip();
+      navItems.forEach((i) => i.classList.remove('active'));
+      item.classList.add('active');
+    });
+  });
+
+  const sections = [
+    { target: 'hero', element: document.querySelector('.hero-section') },
+    { target: 'movies', element: document.getElementById('movies') },
+    { target: 'timeline', element: document.getElementById('timeline') },
+    { target: 'roster', element: document.getElementById('roster') }
+  ];
+
+  window.addEventListener('scroll', () => {
+    const scrollPos = window.scrollY + 250;
+    for (let i = sections.length - 1; i >= 0; i--) {
+      const s = sections[i];
+      if (s.element && s.element.offsetTop <= scrollPos) {
+        navItems.forEach((item) => {
+          if (item.getAttribute('data-section') === s.target) {
+            navItems.forEach((n) => n.classList.remove('active'));
+            item.classList.add('active');
+          }
+        });
+        break;
+      }
+    }
+  });
+}
+
 // ==========================================================================
 // 10. GLOBAL INITIALIZATION
 // ==========================================================================
@@ -1234,8 +1310,10 @@ document.addEventListener('DOMContentLoaded', () => {
   setupTimelineSwitch();
   renderRoster('heroes');
   setupRosterTabs();
+  renderMobileRosterStories();
   setupWebClickEffects();
   setupMobileMenu();
+  setupMobileBottomNav();
 
   // Sound toggle button
   const soundBtn = document.getElementById('sound-toggle-btn');

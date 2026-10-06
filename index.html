@@ -241,6 +241,11 @@
           </button>
         </div>
 
+        <!-- Mobile Avatar Story Quick-Chips (Mobile UX) -->
+        <div id="mobile-roster-stories" class="mobile-roster-stories">
+          <!-- Populated by app.js -->
+        </div>
+
         <div id="roster-grid" class="roster-grid">
           <!-- Populated by app.js -->
         </div>
@@ -330,6 +335,8 @@
        ========================================================================== -->
   <div id="movie-detail-modal" class="modal-overlay" role="dialog" aria-modal="true">
     <div class="modal-window">
+      <!-- Mobile Bottom-Sheet Drag Handle -->
+      <div class="modal-sheet-handle"></div>
       <button class="modal-close-btn" onclick="closeMovieModal()" aria-label="Close Movie Details">
         <i class="fas fa-times"></i>
       </button>
@@ -346,6 +353,34 @@
     <i class="fas fa-spider" style="color: var(--spider-red); font-size: 1.4rem;"></i>
     <span class="toast-text">My Spidey-Sense is tingling!</span>
   </div>
+
+  <!-- ==========================================================================
+       MOBILE BOTTOM NAVIGATION DOCK (App-Like Touch Experience)
+       ========================================================================== -->
+  <nav class="mobile-bottom-nav" aria-label="Mobile Bottom Navigation">
+    <a href="#" class="mobile-nav-item active" data-section="hero">
+      <i class="fas fa-home"></i>
+      <span>Home</span>
+    </a>
+    <a href="#movies" class="mobile-nav-item" data-section="movies">
+      <i class="fas fa-film"></i>
+      <span>Movies</span>
+    </a>
+    <a href="#timeline" class="mobile-nav-item" data-section="timeline">
+      <i class="fas fa-compass"></i>
+      <span>Order</span>
+    </a>
+    <a href="#roster" class="mobile-nav-item" data-section="roster">
+      <i class="fas fa-mask"></i>
+      <span>Roster</span>
+    </a>
+    <button class="mobile-nav-item mobile-sense-btn" onclick="triggerSpideySenseAlert()" aria-label="Trigger Spidey Sense">
+      <div class="mobile-sense-halo">
+        <i class="fas fa-bolt"></i>
+      </div>
+      <span>Sense</span>
+    </button>
+  </nav>
 
   <!-- Core JavaScript -->
   <script src="app.js"></script>
