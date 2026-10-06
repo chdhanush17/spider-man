@@ -1015,81 +1015,46 @@ body {
   line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.75rem;
   flex-shrink: 0;
 }
 
-.movie-card-director {
-  font-size: 0.8rem;
-  color: #64748b;
-  height: 1.25rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-bottom: 0.55rem;
-  flex-shrink: 0;
-}
-
-/* Fixed 2-line excerpt height */
-.movie-card-excerpt {
-  font-size: 0.84rem;
-  color: #94a3b8;
-  line-height: 1.45;
-  height: 2.5rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  margin-bottom: 1.1rem;
-  flex-shrink: 0;
-}
-
-/* Card footer pinned to exact bottom line */
+/* Card footer pinned to exact bottom line with sleek details button */
 .movie-card-footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-top: 0.85rem;
+  justify-content: center;
+  padding-top: 0.75rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   margin-top: auto;
-  height: 2.5rem;
+  height: 2.85rem;
   flex-shrink: 0;
 }
 
-.ott-provider-badge {
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--spider-cyan);
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  max-width: 55%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
 .btn-card-details {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  width: 100%;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   color: #fff;
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 0.8rem;
-  padding: 0.35rem 0.85rem;
-  border-radius: 50px;
+  font-size: 0.82rem;
+  letter-spacing: 0.4px;
+  padding: 0.5rem 0.85rem;
+  border-radius: 8px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 0.35rem;
-  transition: var(--tr-fast);
+  justify-content: center;
+  gap: 0.45rem;
+  transition: all var(--tr-fast);
 }
 
 .movie-card:hover .btn-card-details {
   background: var(--spider-red);
   border-color: var(--spider-red);
   color: #fff;
+  box-shadow: 0 4px 16px var(--spider-red-glow);
 }
 
 /* No results state */

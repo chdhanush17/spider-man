@@ -626,7 +626,6 @@ function getMatchScore(ratingStr) {
 
 function createMovieCardHTML(movie) {
   const matchPercent = getMatchScore(movie.rating);
-  const provider = movie.ott.platform.split('/')[0].trim();
   const ratingNum = movie.rating.split(' ')[0];
 
   return `
@@ -650,14 +649,9 @@ function createMovieCardHTML(movie) {
           <span class="movie-rating"><i class="fas fa-star"></i> ${ratingNum}</span>
         </div>
         <h3 class="movie-card-title" title="${movie.title}">${movie.title}</h3>
-        <p class="movie-card-director"><i class="fas fa-video"></i> ${movie.director}</p>
-        <p class="movie-card-excerpt">${movie.synopsis}</p>
         <div class="movie-card-footer">
-          <span class="ott-provider-badge">
-            <i class="fas fa-tv"></i> ${provider}
-          </span>
           <button class="btn-card-details" onclick="event.stopPropagation(); openMovieModal('${movie.id}')">
-            <i class="fas fa-info-circle"></i> Details
+            <i class="fas fa-info-circle"></i> View Details & Trailer
           </button>
         </div>
       </div>
