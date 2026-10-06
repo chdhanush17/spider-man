@@ -609,7 +609,7 @@ function initWebCanvas() {
 // ==========================================================================
 let currentFilter = 'all';
 let currentSearchQuery = '';
-let currentViewMode = 'rows'; // 'rows' or 'grid'
+
 
 function getMatchScore(ratingStr) {
   if (!ratingStr) return "98% Match";
@@ -703,8 +703,8 @@ function renderMovies() {
     return;
   }
 
-  // When in Netflix Rails mode and browsing all without search query:
-  if (currentViewMode === 'rows' && currentFilter === 'all' && currentSearchQuery === '') {
+  // When browsing all films without search query, present categorized Rails:
+  if (currentFilter === 'all' && currentSearchQuery === '') {
     const categories = [
       {
         id: 'row-raimi',
@@ -791,27 +791,7 @@ function setupFilterEvents() {
     });
   }
 
-  // Netflix layout view switcher buttons
-  const btnRows = document.getElementById('btn-view-rows');
-  const btnGrid = document.getElementById('btn-view-grid');
 
-  if (btnRows && btnGrid) {
-    btnRows.addEventListener('click', () => {
-      soundFX.playThwip();
-      currentViewMode = 'rows';
-      btnRows.classList.add('active');
-      btnGrid.classList.remove('active');
-      renderMovies();
-    });
-
-    btnGrid.addEventListener('click', () => {
-      soundFX.playThwip();
-      currentViewMode = 'grid';
-      btnGrid.classList.add('active');
-      btnRows.classList.remove('active');
-      renderMovies();
-    });
-  }
 }
 
 // ==========================================================================
