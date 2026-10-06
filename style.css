@@ -274,14 +274,12 @@ body {
   right: 0;
   bottom: 0;
   background-image:
-    radial-gradient(circle at 80% 25%, rgba(230, 36, 41, 0.22) 0%, transparent 50%),
-    radial-gradient(circle at 20% 75%, rgba(9, 132, 227, 0.18) 0%, transparent 55%),
-    linear-gradient(to right, rgba(6, 7, 10, 0.95) 20%, rgba(6, 7, 10, 0.72) 60%, rgba(6, 7, 10, 0.92) 100%),
-    url('https://images.unsplash.com/photo-1635805737707-575885ab0820?w=1400&auto=format&fit=crop&q=70');
+    linear-gradient(to right, rgba(6, 7, 10, 0.95) 20%, rgba(6, 7, 10, 0.65) 60%, rgba(6, 7, 10, 0.85) 100%),
+    url('https://wallpapers-clan.com/wp-content/uploads/2023/07/spiderman-deep-dark-background.jpg');
   background-size: cover;
   background-position: center 25%;
   z-index: -1;
-  filter: saturate(1.15);
+  filter: saturate(1.2);
 }
 
 .hero-grid {
@@ -702,22 +700,14 @@ body {
   aspect-ratio: 2/3;
   width: 100%;
   overflow: hidden;
-  background: linear-gradient(110deg, #0d121c 8%, #1a2233 18%, #0d121c 33%);
-  background-size: 200% 100%;
-  animation: shimmerSkeleton 1.8s infinite linear;
-}
-
-@keyframes shimmerSkeleton {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  background: #0d121c;
 }
 
 .movie-card-poster {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform var(--tr-smooth), opacity 0.3s ease;
-  content-visibility: auto;
+  transition: transform var(--tr-smooth);
 }
 
 .movie-card:hover .movie-card-poster {
