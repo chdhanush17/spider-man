@@ -609,10 +609,76 @@ function initWebCanvas() {
 // ==========================================================================
 let currentFilter = 'all';
 let currentSearchQuery = '';
+let currentViewMode = 'rows'; // 'rows' or 'grid'
+
+function getMatchScore(ratingStr) {
+  if (!ratingStr) return "98% Match";
+  if (ratingStr.includes("8.6")) return "99% Match";
+  if (ratingStr.includes("8.4")) return "98% Match";
+  if (ratingStr.includes("8.2")) return "97% Match";
+  if (ratingStr.includes("7.5")) return "94% Match";
+  if (ratingStr.includes("7.4")) return "93% Match";
+  if (ratingStr.includes("6.9")) return "89% Match";
+  if (ratingStr.includes("6.6")) return "86% Match";
+  if (ratingStr.includes("6.3")) return "82% Match";
+  return "99% Anticipated";
+}
+
+function createMovieCardHTML(movie) {
+  const matchPercent = getMatchScore(movie.rating);
+  const provider = movie.ott.platform.split('/')[0].trim();
+  const ratingNum = movie.rating.split(' ')[0];
+
+  return `
+    <article class="movie-card netflix-card" onclick="openMovieModal('${movie.id}')" data-id="${movie.id}">
+      <div class="movie-card-poster-wrapper">
+        <img src="${movie.poster}" alt="${movie.title}" class="movie-card-poster" loading="lazy" />
+        <span class="movie-badge-era">${movie.eraLabel}</span>
+        <span class="netflix-badge-quality">4K UHD</span>
+        <div class="movie-card-overlay-btn">
+          <div class="play-trailer-circle" title="Play Official Trailer">
+            <i class="fas fa-play"></i>
+          </div>
+          <span class="overlay-quick-label">Watch Trailer</span>
+        </div>
+      </div>
+      <div class="movie-card-body">
+        <div class="movie-meta-bar">
+          <span class="netflix-match-score">${matchPercent}</span>
+          <span class="netflix-age-badge">PG-13</span>
+          <span class="movie-year">${movie.year}</span>
+          <span class="movie-rating"><i class="fas fa-star"></i> ${ratingNum}</span>
+        </div>
+        <h3 class="movie-card-title" title="${movie.title}">${movie.title}</h3>
+        <p class="movie-card-director"><i class="fas fa-video"></i> ${movie.director}</p>
+        <p class="movie-card-excerpt">${movie.synopsis}</p>
+        <div class="movie-card-footer">
+          <span class="ott-provider-badge">
+            <i class="fas fa-tv"></i> ${provider}
+          </span>
+          <button class="btn-card-details" onclick="event.stopPropagation(); openMovieModal('${movie.id}')">
+            <i class="fas fa-info-circle"></i> Details
+          </button>
+        </div>
+      </div>
+    </article>
+  `;
+}
+
+function scrollNetflixRow(trackId, direction) {
+  const track = document.getElementById(trackId);
+  if (!track) return;
+  soundFX.playThwip();
+  const scrollDistance = track.clientWidth * 0.75;
+  track.scrollBy({
+    left: direction * scrollDistance,
+    behavior: 'smooth'
+  });
+}
 
 function renderMovies() {
-  const grid = document.getElementById('movie-grid');
-  if (!grid) return;
+  const container = document.getElementById('movie-grid');
+  if (!container) return;
 
   const filtered = SPIDEY_MOVIES.filter((movie) => {
     const matchCategory = currentFilter === 'all' || movie.era === currentFilter;
@@ -626,7 +692,8 @@ function renderMovies() {
   });
 
   if (filtered.length === 0) {
-    grid.innerHTML = `
+    container.className = 'movie-grid-container';
+    container.innerHTML = `
       <div class="no-results">
         <i class="fas fa-spider"></i>
         <h3>No Spider-Man Movies Found</h3>
@@ -636,40 +703,72 @@ function renderMovies() {
     return;
   }
 
-  grid.innerHTML = filtered
-    .map(
-      (movie) => `
-    <article class="movie-card" onclick="openMovieModal('${movie.id}')" data-id="${movie.id}">
-      <div class="movie-card-poster-wrapper">
-        <img src="${movie.poster}" alt="${movie.title}" class="movie-card-poster" loading="lazy" />
-        <span class="movie-badge-era">${movie.eraLabel}</span>
-        <div class="movie-card-overlay-btn">
-          <div class="play-trailer-circle">
-            <i class="fas fa-play"></i>
+  // When in Netflix Rails mode and browsing all without search query:
+  if (currentViewMode === 'rows' && currentFilter === 'all' && currentSearchQuery === '') {
+    const categories = [
+      {
+        id: 'row-raimi',
+        title: 'Tobey Maguire • Raimi Trilogy (2002 — 2007)',
+        icon: 'fa-crown',
+        movies: SPIDEY_MOVIES.filter((m) => m.era === 'raimi')
+      },
+      {
+        id: 'row-amazing',
+        title: 'Andrew Garfield • The Amazing Saga (2012 — 2014)',
+        icon: 'fa-bolt',
+        movies: SPIDEY_MOVIES.filter((m) => m.era === 'amazing')
+      },
+      {
+        id: 'row-mcu',
+        title: 'Tom Holland • Marvel Cinematic Universe (2017 — 2021)',
+        icon: 'fa-mask',
+        movies: SPIDEY_MOVIES.filter((m) => m.era === 'mcu')
+      },
+      {
+        id: 'row-spiderverse',
+        title: 'Miles Morales & Multiverse • Spider-Verse Animated (2018 — 2023)',
+        icon: 'fa-project-diagram',
+        movies: SPIDEY_MOVIES.filter((m) => m.era === 'spiderverse')
+      },
+      {
+        id: 'row-upcoming',
+        title: 'Upcoming Multiverse • Marvel Phase 6 (2026)',
+        icon: 'fa-hourglass-start',
+        movies: SPIDEY_MOVIES.filter((m) => m.era === 'upcoming')
+      }
+    ];
+
+    container.className = 'netflix-rows-wrapper';
+    container.innerHTML = categories
+      .map(
+        (cat) => `
+        <section class="netflix-row-section">
+          <div class="netflix-row-header">
+            <h3 class="netflix-row-title">
+              <i class="fas ${cat.icon} text-spidey-accent"></i> ${cat.title}
+            </h3>
+            <span class="netflix-row-count">${cat.movies.length} Films</span>
           </div>
-        </div>
-      </div>
-      <div class="movie-card-body">
-        <div class="movie-meta-bar">
-          <span class="movie-year"><i class="fas fa-calendar-alt"></i> ${movie.year}</span>
-          <span class="movie-rating"><i class="fas fa-star"></i> ${movie.rating}</span>
-        </div>
-        <h3 class="movie-card-title">${movie.title}</h3>
-        <p class="movie-card-director"><i class="fas fa-video"></i> Dir: ${movie.director}</p>
-        <p class="movie-card-excerpt">${movie.synopsis}</p>
-        <div class="movie-card-footer">
-          <span class="ott-provider-badge">
-            <i class="fas fa-tv"></i> ${movie.ott.platform.split('/')[0]}
-          </span>
-          <button class="btn-card-details">
-            Details & Trailer <i class="fas fa-chevron-right"></i>
-          </button>
-        </div>
-      </div>
-    </article>
-  `
-    )
-    .join('');
+          <div class="netflix-rail-container">
+            <button class="netflix-slider-arrow left" onclick="scrollNetflixRow('${cat.id}', -1)" aria-label="Scroll left">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="netflix-row-track" id="${cat.id}">
+              ${cat.movies.map((m) => createMovieCardHTML(m)).join('')}
+            </div>
+            <button class="netflix-slider-arrow right" onclick="scrollNetflixRow('${cat.id}', 1)" aria-label="Scroll right">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </section>
+      `
+      )
+      .join('');
+  } else {
+    // Aligned Netflix Grid view (when in Grid mode OR when filtering/searching)
+    container.className = 'movie-grid-aligned';
+    container.innerHTML = filtered.map((movie) => createMovieCardHTML(movie)).join('');
+  }
 }
 
 function setupFilterEvents() {
@@ -688,6 +787,28 @@ function setupFilterEvents() {
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
       currentSearchQuery = e.target.value.toLowerCase().trim();
+      renderMovies();
+    });
+  }
+
+  // Netflix layout view switcher buttons
+  const btnRows = document.getElementById('btn-view-rows');
+  const btnGrid = document.getElementById('btn-view-grid');
+
+  if (btnRows && btnGrid) {
+    btnRows.addEventListener('click', () => {
+      soundFX.playThwip();
+      currentViewMode = 'rows';
+      btnRows.classList.add('active');
+      btnGrid.classList.remove('active');
+      renderMovies();
+    });
+
+    btnGrid.addEventListener('click', () => {
+      soundFX.playThwip();
+      currentViewMode = 'grid';
+      btnGrid.classList.add('active');
+      btnRows.classList.remove('active');
       renderMovies();
     });
   }
